@@ -1,0 +1,330 @@
+/* General Styles */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #000; /* Light to dark */
+    color: #fff; /* Dark text to light */
+}
+
+/* Header Section */
+header {
+    background-color: white; /* Inverted to white */
+    color: black; /* Text inverted to black */
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start; /* Align all content to the left */
+    align-items: center;
+    padding: 0 2rem;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align links to the left */
+    gap: 1rem;
+}
+
+.nav div:nth-child(2) a {
+    color: black; /* Inverted to black */
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav div:nth-child(2) a:hover {
+    color: #000; /* Hover inverted to black */
+}
+
+.nav div:nth-child(2) a.active {
+    color: #000;
+    border-bottom: 2px solid #000; /* Border inverted */
+}
+
+.nav img {
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+/* Ensure content starts below the header */
+body {
+    margin-top: 5rem;
+}
+
+/* Hero Section */
+.bhangra-container {
+    text-align: center;
+    padding: 8rem 2rem 3rem;
+    background-color: #000; /* Inverted to black */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid #fff; /* Inverted to white */
+}
+
+.Bhangra-HQ-Header h1 {
+    font-size: 3rem;
+    color: white; /* Inverted */
+    margin-bottom: 0.5rem;
+}
+
+.Bhangra-HQ-Header hr {
+    width: 10%;
+    margin: 0.5rem auto;
+    border: 1px solid white; /* Inverted */
+}
+
+.Bhangra-HQ-Header p {
+    color: #ccc; /* Subtle light gray */
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 2rem;
+    background: #000; /* Inverted to black */
+    margin: 2rem auto;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    max-width: 800px;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    color: white; /* Inverted */
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    font-size: 1rem;
+    color: #ccc; /* Subtle gray */
+    line-height: 1.8;
+}
+
+/* Segments Section */
+.segments {
+    padding: 2rem;
+    text-align: center;
+    background: #000; /* Inverted to black */
+}
+
+.segments h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white; /* Inverted */
+}
+
+.segments .bhangra-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.bhangra-segment {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: auto; /* Dynamically adjust height */
+    aspect-ratio: 4 / 3; /* Maintain a consistent aspect ratio (4:3 is common for images) */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.bhangra-segment:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
+}
+
+.bhangra-segment img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Fills the entire box */
+    height: 100%; /* Ensures the image fills the box */
+    object-fit: cover; /* Crops the image to cover the box */
+    z-index: 1;
+    background-color: black; /* Adds a background to handle empty spaces */
+}
+
+.bhangra-segment h4 {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 0.5rem;
+    color: black; /* Inverted to black */
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Teams Section with Map */
+.teams-map {
+    text-align: center;
+    padding: 2rem;
+    background: #000; /* Inverted */
+    color: white; /* Inverted */
+}
+
+/* Map Container */
+/* Map Container */
+.map-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+/* SVG Styling */
+.us-map {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.region {
+    position: absolute;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.region:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Team Info */
+.team-info {
+    text-align: left;
+    margin-top: 1rem;
+    background: #000; /* Inverted */
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(255, 255, 255, 0.2);
+    color: white; /* Inverted */
+}
+
+.team-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.team-info li {
+    background: #333; /* Adjusted for dark background */
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background: white; /* Inverted to white */
+    color: black; /* Inverted */
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Login Container */
+.login-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Login Form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+.btn {
+    background: #007bff;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
