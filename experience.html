@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Experience</title>
+  <style>
+    .role-entry {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Add Experience</h1>
+
+  <form id="experience-form">
+    <!-- Team Selection -->
+    <label for="team-select">Select Existing Team:</label>
+    <select id="team-select">
+      <option value="">Select a team</option>
+    </select>
+    <br><br>
+
+    <label for="new-team">Or Enter New Team:</label>
+    <input type="text" id="new-team" placeholder="New team name" />
+    <br><br>
+
+    <!-- Dynamic Role Blocks -->
+    <div id="roles-container">
+      <div class="role-entry">
+        <label>Role:</label>
+        <select class="role-select" required>
+          <option value="">Select a role</option>
+        </select>
+
+        <br><br>
+        <label>Start Date:</label>
+        <input type="date" class="start-date" required />
+
+        <label>End Date:</label>
+        <input type="date" class="end-date" required />
+      </div>
+    </div>
+
+    <!-- Add More Roles -->
+    <button type="button" id="add-role">+ Add Another Role</button>
+    <br><br>
+
+    <!-- Description -->
+    <label for="description">Description:</label><br>
+    <textarea id="description" rows="5" cols="50" placeholder="Describe your experience..."></textarea>
+    <br><br>
+
+    <button type="submit">Submit Experience</button>
+  </form>
+
+  <script src="experience.js"></script>
+</body>
+</html>
