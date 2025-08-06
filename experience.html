@@ -8,6 +8,22 @@
       border: 1px solid #ccc;
       padding: 10px;
       margin-bottom: 10px;
+      position: relative;
+    }
+
+    .remove-role {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 4px 8px;
+      cursor: pointer;
+    }
+
+    .remove-role:hover {
+      background-color: #c0392b;
     }
   </style>
 </head>
@@ -36,10 +52,17 @@
 
         <br><br>
         <label>Start Date:</label>
-        <input type="date" class="start-date" required />
+        <input type="date" class="start-date" required max="">
 
         <label>End Date:</label>
-        <input type="date" class="end-date" required />
+        <input type="date" class="end-date" required max="" />
+        <label>
+          <input type="checkbox" class="present-checkbox" />
+          Present
+        </label>
+
+        <br><br>
+        <button type="button" class="remove-role">Remove</button>
       </div>
     </div>
 
@@ -55,6 +78,7 @@
     <button type="submit">Submit Experience</button>
   </form>
 
-  <script src="experience.js"></script>
+  <!-- Link your updated JS file -->
+  <script src="/experience.js"></script>
 </body>
 </html>
